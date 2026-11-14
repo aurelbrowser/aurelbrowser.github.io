@@ -143,7 +143,17 @@ footer a{color:var(--muted);text-decoration:none;margin-left:18px}
 dialog{margin:auto;max-width:640px;width:92vw;border-radius:24px;border:1px solid var(--stroke);background:#0d1222;color:var(--text);padding:34px;line-height:1.6}
 dialog::backdrop{background:rgba(0,0,0,.6);backdrop-filter:blur(6px)}
 dialog h3{font-size:24px;margin-bottom:12px}dialog h4{margin:18px 0 4px}dialog p,dialog li{color:var(--muted);font-size:15px}dialog ul{padding-left:20px}
-@media (max-width:860px){.grid{grid-template-columns:1fr}.feat.big{grid-column:auto}.dbody{grid-template-columns:1fr}.privacy{grid-template-columns:1fr}.shield{display:none}.navlinks a:not(.btn){display:none}.row{grid-template-columns:1.6fr .7fr .7fr;padding:16px 18px;font-size:15px}}
+.biz{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:48px;align-items:start}
+.bizdemo{border-radius:24px;padding:22px;background:var(--card);border:1px solid var(--stroke);display:flex;flex-direction:column;gap:10px}
+.bk{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:6px}.bk div{background:rgba(255,255,255,.05);border-radius:14px;padding:12px;display:flex;flex-direction:column}
+.bk span{font-size:12px;color:var(--muted)}.bk b{font-size:21px;letter-spacing:-.02em}.bk .o b{color:#fdba74}
+.bl{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.035);border-radius:14px;padding:11px 14px}
+.bl>div:nth-child(2){flex:1;display:flex;flex-direction:column}.bl span{font-size:13px;color:var(--muted)}
+.bd{width:44px;text-align:center;font-size:10px;color:var(--muted);letter-spacing:1px;display:flex;flex-direction:column}.bd b{font-size:17px;color:var(--text);letter-spacing:0}
+.bl i{font-style:normal;font-size:12px;padding:5px 11px;border-radius:999px;background:rgba(106,168,255,.18);color:#bcd6ff;white-space:nowrap}.bl i.p{background:rgba(34,197,94,.16);color:#86efac}
+.bizlist{display:flex;flex-direction:column;gap:18px}.bizlist div{display:flex;gap:14px}.bizlist i{font-style:normal;font-size:22px;width:44px;height:44px;border-radius:14px;background:var(--card);border:1px solid var(--stroke);display:grid;place-items:center;flex:none}
+.bizlist b{display:block;font-size:17px;margin-bottom:2px}.bizlist span{color:var(--muted);font-size:15px}
+@media (max-width:860px){.biz{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.feat.big{grid-column:auto}.dbody{grid-template-columns:1fr}.privacy{grid-template-columns:1fr}.shield{display:none}.navlinks a:not(.btn){display:none}.row{grid-template-columns:1.6fr .7fr .7fr;padding:16px 18px;font-size:15px}}
 @media (max-width:520px){.signup{flex-direction:column;border-radius:24px}.signup .btn{justify-content:center}.dtop .sp{display:none}.dclock{font-size:52px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.ring .r{stroke-dashoffset:0}.ring .rg{opacity:.8}.rv{opacity:1;transform:none}}
 </style>
@@ -155,7 +165,7 @@ dialog h3{font-size:24px;margin-bottom:12px}dialog h4{margin:18px 0 4px}dialog p
 
 <nav id="nav"><div class="wrap">
   <a class="brand" href="#top"><svg viewBox="0 0 34 22"><ellipse cx="17" cy="11" rx="14" ry="6" transform="rotate(-14 17 11)" fill="none" stroke="url(#rgrad)" stroke-width="3"/></svg>Aurel</a>
-  <div class="navlinks"><a href="#features">Features</a><a href="#themes">Themes</a><a href="#privacy">Privacy</a><a href="#faq">FAQ</a><a class="btn" href="#join">Join the waitlist</a></div>
+  <div class="navlinks"><a href="#features">Features</a><a href="#work">For work</a><a href="#themes">Themes</a><a href="#privacy">Privacy</a><a href="#faq">FAQ</a><a class="btn" href="#join">Join the waitlist</a></div>
 </div></nav>
 
 <main id="top">
@@ -163,7 +173,7 @@ dialog h3{font-size:24px;margin-bottom:12px}dialog h4{margin:18px 0 4px}dialog p
   <svg class="ring" viewBox="0 0 660 330" aria-hidden="true"><ellipse class="rg" cx="330" cy="165" rx="270" ry="96" transform="rotate(-14 330 165)" pathLength="100"/><ellipse class="r" cx="330" cy="165" rx="270" ry="96" transform="rotate(-14 330 165)" pathLength="100"/></svg>
   <span class="pill"><i></i>Coming soon to Mac</span>
   <h1>The browser that<br><span class="grad">knows your day.</span></h1>
-  <p class="lead">Your classes, the emails that matter and what’s due — in one calm view, every time you open a tab.</p>
+  <p class="lead">Your classes, your clients, the emails that matter and what’s due — in one calm view, every time you open a tab. Built for students, and for people running their own thing.</p>
   <form class="signup" data-form>
     <input type="email" name="email" placeholder="you@email.com" autocomplete="email" required aria-label="Email address">
     <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -203,7 +213,34 @@ dialog h3{font-size:24px;margin-bottom:12px}dialog h4{margin:18px 0 4px}dialog p
     <div class="feat rv"><div class="ficon">❝</div><h3>Research kit</h3><p>Save highlights with their source, cite any page in MLA or APA, and read without ads in Reader Mode.</p></div>
     <div class="feat rv"><div class="ficon">◫</div><h3>Tabs that tidy themselves</h3><p>Split View, a Tab Shelf for tabs you forgot about, and videos that pop out when you switch tabs.</p></div>
     <div class="feat rv"><div class="ficon">✎</div><h3>Quick capture</h3><p>Type “todo lab report fri” or “note ask about the test” in the address bar — saved with the page you were on.</p></div>
-    <div class="feat big full rv"><div class="ficon">✦</div><h3>Made to feel good</h3><p>A glowing opening animation, live weather, a daily quote, and themes that change for the seasons and the holidays you celebrate — even the Dock icon.</p><span class="tag">Light · Dark · Black &amp; White · 16 seasonal themes</span></div>
+    <div class="feat big rv"><div class="ficon">🗓</div><h3>Plan My Week</h3><p>Aurel looks at your due dates, classes, spares and calendar, then books study sessions for you — extra ones before exams, finished the night before.</p><span class="tag">Exam mode · countdowns · study time per class</span></div>
+    <div class="feat rv"><div class="ficon">🎓</div><h3>Grades &amp; the final</h3><p>Marks from Edsby and Google Classroom become live averages — plus exactly what you need on the final.</p></div>
+    <div class="feat rv"><div class="ficon">⌛</div><h3>Screen Time</h3><p>See where your time goes, set daily limits, and keep a focus streak going.</p></div>
+    <div class="feat rv"><div class="ficon">🖍</div><h3>Highlights that stay</h3><p>Highlight any page and it’s still there next time. Screenshot, draw arrows, and send.</p></div>
+    <div class="feat rv"><div class="ficon">🧠</div><h3>It remembers what you read</h3><p>Type a few words you remember and Aurel finds the page — even after you closed it.</p></div>
+    <div class="feat rv"><div class="ficon">◎</div><h3>Page Watch</h3><p>Waiting on marks, an application or a price drop? Aurel checks for you and taps you when it changes.</p></div>
+    <div class="feat rv"><div class="ficon">📚</div><h3>Citations, done</h3><p>Save sources into projects and copy a finished Works Cited list. Plus polite email templates for teachers.</p></div>
+    <div class="feat big full rv"><div class="ficon">✦</div><h3>Made to feel good</h3><p>A glowing opening animation, live weather, a daily quote, a new wallpaper every morning, rain and ocean sounds while you focus, and themes that change for the seasons and the holidays you celebrate — even the Dock icon. At the end of the year, get your own Year in Aurel.</p><span class="tag">Light · Dark · Black &amp; White · 16 seasonal themes · Year in Aurel</span></div>
+  </div>
+</section>
+
+<section id="work" class="wrap">
+  <div class="center rv"><div class="eyebrow">Aurel for work</div><h2>Run your business<br><span class="grad">right from your browser.</span></h2>
+  <p class="sublead">Snow clearing, tutoring, lessons, a side hustle — the Business Hub keeps your clients, jobs and money in one place — no extra apps to juggle.</p></div>
+  <div class="biz rv">
+    <div class="bizdemo">
+      <div class="bk"><div><span>Earned this month</span><b>$2,480</b></div><div class="o"><span>Waiting to be paid</span><b>$360</b></div><div><span>Profit</span><b>$2,190</b></div></div>
+      <div class="bl"><div class="bd"><b>14</b>NOV</div><div><b>Driveway clearing</b><span>Jordan L. · 7:30 AM · $45</span></div><i>Mark done</i></div>
+      <div class="bl"><div class="bd"><b>14</b>NOV</div><div><b>Lesson — beginner</b><span>Priya S. · 4:00 PM · $60</span></div><i>Mark done</i></div>
+      <div class="bl"><div class="bd"><b>INV</b>0042</div><div><b>Invoice · Sam R.</b><span>$248.60 incl. HST · PDF saved</span></div><i class="p">Paid</i></div>
+    </div>
+    <div class="bizlist">
+      <div><i>👥</i><p><b>Clients in one place</b><span>Call, text, email or get directions in one tap. Notes like gate codes stay with each client.</span></p></div>
+      <div><i>🧾</i><p><b>Invoices in seconds</b><span>Mark a job done and Aurel makes a numbered invoice with tax, saved as a clean PDF and ready to email.</span></p></div>
+      <div><i>💬</i><p><b>Message every client at once</b><span>One message, personalised with each name, sent from your own Messages or Mail. Snow coming? Aurel reminds you to tell your snow clients.</span></p></div>
+      <div><i>📈</i><p><b>Know your numbers</b><span>What you earned, what’s owed, expenses and profit — with a spreadsheet export for tax time.</span></p></div>
+      <div><i>📅</i><p><b>Ready for every meeting</b><span>Before a meeting, see who’s coming, the agenda and your last note. Join in one click.</span></p></div>
+    </div>
   </div>
 </section>
 
@@ -223,6 +260,10 @@ dialog h3{font-size:24px;margin-bottom:12px}dialog h4{margin:18px 0 4px}dialog p
     <div class="row"><div>Answers in the address bar</div><div class="n">—</div><div class="y">✓</div></div>
     <div class="row"><div>Separate Spaces &amp; sign-ins</div><div class="n">—</div><div class="y">✓</div></div>
     <div class="row"><div>Built-in focus mode &amp; citations</div><div class="n">—</div><div class="y">✓</div></div>
+    <div class="row"><div>Plans your study week</div><div class="n">—</div><div class="y">✓</div></div>
+    <div class="row"><div>Tracks your marks &amp; the final you need</div><div class="n">—</div><div class="y">✓</div></div>
+    <div class="row"><div>Runs your small business</div><div class="n">—</div><div class="y">✓</div></div>
+    <div class="row"><div>Remembers pages you’ve read</div><div class="n">—</div><div class="y">✓</div></div>
     <div class="row"><div>Holiday &amp; seasonal themes</div><div class="n">—</div><div class="y">✓</div></div>
   </div>
 </section>
@@ -234,7 +275,9 @@ dialog h3{font-size:24px;margin-bottom:12px}dialog h4{margin:18px 0 4px}dialog p
     <div class="plist rv">
       <div><i>🔒</i><p><b>Read-only access</b><span>Aurel can read your mail and calendar to brief you — it can never send, delete or change anything.</span></p></div>
       <div><i>🛡</i><p><b>Blocks trackers &amp; dangerous sites</b><span>Ads, trackers and known phishing pages are stopped before they load.</span></p></div>
+      <div><i>📊</i><p><b>See what was blocked</b><span>A privacy report shows every tracker Aurel stopped — today, this week and all time.</span></p></div>
       <div><i>👆</i><p><b>Lock with Touch ID</b><span>Keep your dashboard private when someone else is at your Mac.</span></p></div>
+      <div><i>👪</i><p><b>Parent &amp; teacher lock</b><span>A PIN protects screen-time limits and Focus, so they actually stick.</span></p></div>
     </div>
   </div>
 </section>
@@ -246,6 +289,7 @@ dialog h3{font-size:24px;margin-bottom:12px}dialog h4{margin:18px 0 4px}dialog p
     <details><summary>How much will it cost?</summary><p>Pricing will be shared before launch — waitlist members hear first.</p></details>
     <details><summary>Does it work on Windows or iPhone?</summary><p>Aurel is built for Mac first. Other platforms may follow based on demand.</p></details>
     <details><summary>Do I need Edsby or Google Classroom?</summary><p>No. They’re optional connections. Aurel works great as an everyday browser, and gets smarter as you connect your accounts.</p></details>
+    <details><summary>Can I use Aurel for my business?</summary><p>Yes. The Business Hub handles clients, jobs, invoices and expenses for small businesses and side hustles. Everything is stored on your Mac, and invoices are saved as PDFs you send yourself.</p></details>
     <details><summary>Will my websites work normally?</summary><p>Yes. Aurel runs on the same engine as Chrome, so the sites you use every day work just like you’re used to.</p></details>
   </div>
 </section>
