@@ -156,6 +156,17 @@ dialog h3{font-size:24px;margin-bottom:12px}dialog h4{margin:18px 0 4px}dialog p
 @media (max-width:860px){.biz{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.feat.big{grid-column:auto}.dbody{grid-template-columns:1fr}.privacy{grid-template-columns:1fr}.shield{display:none}.navlinks a:not(.btn){display:none}.row{grid-template-columns:1.6fr .7fr .7fr;padding:16px 18px;font-size:15px}}
 @media (max-width:520px){.signup{flex-direction:column;border-radius:24px}.signup .btn{justify-content:center}.dtop .sp{display:none}.dclock{font-size:52px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.ring .r{stroke-dashoffset:0}.ring .rg{opacity:.8}.rv{opacity:1;transform:none}}
+/* feature ticker */
+.ticker{position:relative;margin:10px 0 30px;padding:14px 0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.trow{display:flex;width:max-content;gap:14px;padding:7px 0;animation:tk 48s linear infinite}
+.trow.rev{animation-direction:reverse;animation-duration:56s}
+.ticker:hover .trow{animation-play-state:paused}
+.tk{display:inline-flex;align-items:center;gap:10px;white-space:nowrap;padding:12px 22px;border-radius:999px;background:var(--card);border:1px solid var(--stroke);font-size:16px;font-weight:600;color:var(--text);backdrop-filter:blur(12px)}
+.tk i{font-style:normal;font-size:18px}
+.trow:not(.rev) .tk:nth-child(3n+1){border-color:rgba(156,201,255,.35)}.trow.rev .tk:nth-child(3n+2){border-color:rgba(196,181,253,.35)}
+.dup{display:contents}@keyframes tk{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.trow{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.trow .dup{display:none}}
+@media (max-width:640px){.tk{font-size:14px;padding:10px 16px}}
 </style>
 </head>
 <body>
@@ -200,6 +211,11 @@ dialog h3{font-size:24px;margin-bottom:12px}dialog h4{margin:18px 0 4px}dialog p
     </div>
   </div>
 </header>
+
+<div class="ticker" aria-label="Aurel features">
+  <div class="trow"><span class="tk"><i>🔎</i>Ask your address bar anything</span><span class="tk"><i>🛡</i>Trackers blocked before they load</span><span class="tk"><i>🎯</i>Focus mode + rain sounds</span><span class="tk"><i>🖍</i>Highlights that stay</span><span class="tk"><i>💲</i>Price-drop alerts</span><span class="tk"><i>📝</i>Exam countdowns</span><span class="tk"><i>📊</i>Your marks in one place</span><span class="tk"><i>🧾</i>Invoices in two clicks</span><span class="tk"><i>⌨️</i>Type ;omw → “On my way!”</span><span class="tk"><i>🔗</i>Clean links, no tracking junk</span><span class="dup" aria-hidden="true"><span class="tk"><i>🔎</i>Ask your address bar anything</span><span class="tk"><i>🛡</i>Trackers blocked before they load</span><span class="tk"><i>🎯</i>Focus mode + rain sounds</span><span class="tk"><i>🖍</i>Highlights that stay</span><span class="tk"><i>💲</i>Price-drop alerts</span><span class="tk"><i>📝</i>Exam countdowns</span><span class="tk"><i>📊</i>Your marks in one place</span><span class="tk"><i>🧾</i>Invoices in two clicks</span><span class="tk"><i>⌨️</i>Type ;omw → “On my way!”</span><span class="tk"><i>🔗</i>Clean links, no tracking junk</span></span></div>
+  <div class="trow rev"><span class="tk"><i>📬</i>Gmail, Calendar & Classroom together</span><span class="tk"><i>🧠</i>Never lose a page</span><span class="tk"><i>✏️</i>Draw on any page</span><span class="tk"><i>💼</i>Business Hub for side hustles</span><span class="tk"><i>🎂</i>Birthday reminders</span><span class="tk"><i>🔒</i>Parent lock</span><span class="tk"><i>🖼</i>A new wallpaper every day</span><span class="tk"><i>📈</i>Your own privacy report</span><span class="tk"><i>⊞</i>Every feature, one shortcut</span><span class="tk"><i>🌨</i>“When will it snow?” — answered</span><span class="dup" aria-hidden="true"><span class="tk"><i>📬</i>Gmail, Calendar & Classroom together</span><span class="tk"><i>🧠</i>Never lose a page</span><span class="tk"><i>✏️</i>Draw on any page</span><span class="tk"><i>💼</i>Business Hub for side hustles</span><span class="tk"><i>🎂</i>Birthday reminders</span><span class="tk"><i>🔒</i>Parent lock</span><span class="tk"><i>🖼</i>A new wallpaper every day</span><span class="tk"><i>📈</i>Your own privacy report</span><span class="tk"><i>⊞</i>Every feature, one shortcut</span><span class="tk"><i>🌨</i>“When will it snow?” — answered</span></span></div>
+</div>
 
 <section id="features" class="wrap">
   <div class="center rv"><div class="eyebrow">What makes it different</div><h2>Not just a browser.<br><span class="grad">A calmer way to start your day.</span></h2>
